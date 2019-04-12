@@ -21,7 +21,11 @@ webpack
 #//安装到你的项目目录
 >>npm install --save-dev webpack
 
->npm运行webpack可能会提示需要安装webpack-cli，npm还懂事的询问用户是否自动安装，，，确认yes npm安装，结果一直提升需要安装webpack-cli，然后请教了度娘，webpack版本问题：“在webpack 3中，webpack本身和它的CLI以前都是在同一个包中，但在第4版中，他们已经将两者分开来更好地管理它们。——https://www.jianshu.com/p/826e9c9b9557”，cnpm全局安装-cli，再-v，如果不行再全局安装下webpack，就ok了
+>npm运行webpack可能会提示需要安装webpack-cli，npm还懂事的询问用户是否自动安装，，，确认yes npm安装，结果一直提升需要安装webpack-cli，然后请教了度娘，webpack版本问题：“在webpack 3中，webpack本身和它的CLI以前都是在同一个包中，但在第4版中，他们已经将两者分开来更好地管理它们。
+
+https://www.jianshu.com/p/826e9c9b9557”
+
+，cnpm全局安装-cli，再-v，如果不行再全局安装下webpack，就ok了
 
 五、运行
 -----
