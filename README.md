@@ -42,8 +42,8 @@ npm init
 `# {extry file}`处填写入口文件的路径，本文中就是上述main.js的路径，
 `# {destination for bundled file}`处填写打包文件的存放路径
 `#` 填写路径的时候不用添加{}
+>>eg：webpack app/main.js public/bundle.js
 
+>>非全局安装：node_modules/.bin/webpack app/main.js public/bundle.js
 
-eg：webpack app/main.js public/bundle.js
-非全局安装：node_modules/.bin/webpack app/main.js public/bundle.js
 参考文章：https://segmentfault.com/a/1190000006178770
