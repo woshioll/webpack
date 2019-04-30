@@ -16,18 +16,22 @@ webpack
 
 四、安装
 --------
-#//全局安装
+
+### 全局安装
 >> npm install -g webpack
-#//安装到你的项目目录
+
+### 安装到你的项目目录
 >>npm install --save-dev webpack
 
 >npm运行webpack可能会提示需要安装webpack-cli，npm还懂事的询问用户是否自动安装，，，确认yes npm安装，结果一直提升需要安装webpack-cli，然后请教了度娘，webpack版本问题：“在webpack 3中，webpack本身和它的CLI以前都是在同一个包中，但在第4版中，他们已经将两者分开来更好地管理它们。
 
 https://www.jianshu.com/p/826e9c9b9557”
 
-cnpm全局安装webpack-cli，再-v，如果不行再全局安装下webpack，就ok了
+>cnpm全局安装webpack-cli，再-v，如果不行再全局安装下webpack，就ok了
 
-来自写这笔记几天后的未来：之后再cmd运行webpack -v/-h的时候会报错Error: Cannot find module 'locate-path'，一边找方法，一边瞎鼓捣，发现在c:\Users\你的计算机名称（这个就是ctrl+r后打开cmd时候的路径）里面会报这个错，而在D:E:盘里会正常显示版本号，，，反正也不在c盘放工作项目，这个问题就先放着了，以后知道问题解决方法后会来补充
+#### 来自写这笔记几天后的未来：
+
+>之后再cmd运行webpack -v/-h的时候会报错Error: Cannot find module 'locate-path'，一边找方法，一边瞎鼓捣，发现在c:\Users\你的计算机名称（这个就是ctrl+r后打开cmd时候的路径）里面会报这个错，而在D:E:盘里会正常显示版本号，，，反正也不在c盘放工作项目，这个问题就先放着了，以后知道问题解决方法后会来补充
 
 五、运行
 -----
