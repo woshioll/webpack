@@ -25,7 +25,9 @@ webpack
 
 https://www.jianshu.com/p/826e9c9b9557”
 
-，cnpm全局安装-cli，再-v，如果不行再全局安装下webpack，就ok了
+cnpm全局安装webpack-cli，再-v，如果不行再全局安装下webpack，就ok了
+
+来自写这笔记几天后的未来：之后再cmd运行webpack -v/-h的时候会报错Error: Cannot find module 'locate-path'，一边找方法，一边瞎鼓捣，发现在c:\Users\你的计算机名称（这个就是ctrl+r后打开cmd时候的路径）里面会报这个错，而在D:E:盘里会正常显示版本号，，，反正也不在c盘放工作项目，这个问题就先放着了，以后知道问题解决方法后会来补充
 
 五、运行
 -----
