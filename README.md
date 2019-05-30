@@ -127,6 +127,8 @@ module.exports = {
 >>3）这就好了，不管当年你是不是全局安装的webpack，直接npm start就行了思密达
 
 二、思否		路径：https://segmentfault.com/a/1190000013052777?utm_source=tag-newest
+-------------------------
+
 >1.创建工作目录；
 
 >2.npm init（创建package.json文件）
