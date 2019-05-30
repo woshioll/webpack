@@ -52,24 +52,24 @@ npm init
 一、思否		路径：https://segmentfault.com/a/1190000006178770#articleHeader2
 -----------
 
->>1、npm init创建package.json配置文件
+>1、npm init创建package.json配置文件
 
->>2、npm 安装webpack，具体方法或者坑可以查看之前的写webpack
+>2、npm 安装webpack，具体方法或者坑可以查看之前的写webpack
 
->>3、搭建文件
->>>main为入口文件，用require来接收/导入文件
->>>greeter里面来搞事情，用express暴露出去
->>>public为项目的文件，完了把项目打包后的js导入里面
-
-
+>3、搭建文件
+>>main为入口文件，用require来接收/导入文件
+>>greeter里面来搞事情，用express暴露出去
+>>public为项目的文件，完了把项目打包后的js导入里面
 
 
 
->>4、
 
->>>1）html无所谓写什么
 
->>>2）main：
+>4、
+
+>>1）html无所谓写什么
+
+>>2）main：
 
 ```javascript
 const greeter = require('./Greeter.js');
@@ -85,9 +85,9 @@ module.exports = function() {
 };
 ```
 
->>5、做好之后开始打包，cmd里面写
+>5、做好之后开始打包，cmd里面写
 
->>webpack “填写入口文件的路径，本文中就是上述main.js的路径”（我是空格）“打包文件的存放路径”（不算括号和引号）
+>webpack “填写入口文件的路径，本文中就是上述main.js的路径”（我是空格）“打包文件的存放路径”（不算括号和引号）
 eg：
 
 webpack app/main.js public/bundle.js
@@ -98,9 +98,12 @@ node_modules/.bin/webpack app/main.js public/bundle.js
 
 这样指定位置就有了打包后的文件了，这里是bundle,js
 打开页面看看有没有相应的效果，当然要记得给html引入那个新来的js文件
->>6、如果嫌敲命令行麻烦，可以：
->>>1）在根目录创建webpack.config.js
->>>2）在里面写：
+>6、如果嫌敲命令行麻烦，可以：
+
+>>1）在根目录创建webpack.config.js
+
+>>2）在里面写：
+
 ```javascript
 module.exports = {
   entry:  __dirname + "/app/main.js",//已多次提及的唯一入口文件
@@ -111,36 +114,59 @@ module.exports = {
 }
 ```
 
->>>3）跑起来！npm直接webpack就行了，当然如果之前是局部安装webpack的话依然是node_modules/.bin/webpack这么写（些许麻烦）
->>7、如果还嫌麻烦……
+>>3）跑起来！npm直接webpack就行了，当然如果之前是局部安装webpack的话依然是node_modules/.bin/webpack这么写（些许麻烦）
 
->>>1）打开package.json
+>7、如果还嫌麻烦……
 
->>>2）找到“script“，将它设置成："start": "webpack"
+>>1）打开package.json
+
+>>2）找到“script“，将它设置成："start": "webpack"
+
 （也许么有start，只有test，那就添加进去，不要一激动，把test改成webpack，亲自踩坑）
->>>3）这就好了，不管当年你是不是全局安装的webpack，直接npm start就行了思密达
+
+>>3）这就好了，不管当年你是不是全局安装的webpack，直接npm start就行了思密达
 
 二、思否		路径：https://segmentfault.com/a/1190000013052777?utm_source=tag-newest
-1.创建工作目录；
-2.npm init（创建package.json文件）
-npm init了之后默认会创建一个项目依赖的package.json文件
-3.npm install webpack --save-dev
-npm install了之后会安装一些项目依赖的包在node_modules文件夹内。
-4.创建一个静态页（index.html）及入口文件（app.js）
-5.执行命令：webpack app.js bundle.js
-可以看到执行该命令之后，生成了一个bundle.js文件。
+>1.创建工作目录；
 
-6添加模块
-1.被引用的文件：
-module.exports='';
+>2.npm init（创建package.json文件）
 
-2.引用文件：
+>>npm init了之后默认会创建一个项目依赖的package.json文件
+
+>3.npm install webpack --save-dev
+
+>>npm install了之后会安装一些项目依赖的包在node_modules文件夹内。
+
+>4.创建一个静态页（index.html）及入口文件（app.js）
+
+>5.执行命令：webpack app.js bundle.js
+
+>>可以看到执行该命令之后，生成了一个bundle.js文件。
+
+>6.添加模块
+
+>>1.被引用的文件：
+
+>>>module.exports='';
+
+>>2.引用文件：
+
+```javascript
 var module = require("./module.js") 
 import module from ("./module.js")
-7、每次，我们都需要指定两个文件来打包很不方便，并且每次文件有修改需要手动在重新打包也比较崩溃
-将webpack写入package.json来扩展命令直接用npm webpack即可运行命令
-  --watch 自动更新
-  --progress 显示打包进度
-  --display-modules 列出打包模块
-  --display-reasons 列出打包原因
-  --p 压缩混淆脚本
+```
+
+>7、每次，我们都需要指定两个文件来打包很不方便，并且每次文件有修改需要手动在重新打包也比较崩溃
+
+>>将webpack写入package.json来扩展命令直接用npm webpack即可运行命令
+
+  >>>--watch 自动更新
+  
+  >>>--progress 显示打包进度
+  
+  >>>--display-modules 列出打包模块
+  
+  >>>--display-reasons 列出打包原因
+  
+  >>>--p 压缩混淆脚本
+  
